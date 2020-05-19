@@ -193,9 +193,8 @@ public class SqlGenerate {
         if (dbCount > tbCount) {
             throw new IllegalArgumentException("分库数量不能大于分表数量");
         }
-        int perTbCount = tbCount / dbCount;
-        int sumTbCount = perTbCount * dbCount;
-        if (sumTbCount != tbCount) {
+        int outCount = tbCount % dbCount;
+        if (outCount != 0) {
             throw new IllegalArgumentException("分库与分表的数量不合理");
         }
         return generateShardingSqlStringCore(dbCount,tbCount,sqlTemplate);
