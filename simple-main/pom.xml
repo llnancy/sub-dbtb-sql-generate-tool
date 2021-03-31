@@ -12,7 +12,7 @@
     <artifactId>simple-main</artifactId>
 
     <properties>
-        <google.guava.version>28.1-jre</google.guava.version>
+        <google.guava.version>29.0-jre</google.guava.version>
         <apache.commons.lang3>3.9</apache.commons.lang3>
     </properties>
 
